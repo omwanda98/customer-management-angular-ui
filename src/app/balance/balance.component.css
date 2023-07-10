@@ -1,0 +1,21 @@
+.card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+  }
+  
+  .card-content {
+    text-align: center;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  

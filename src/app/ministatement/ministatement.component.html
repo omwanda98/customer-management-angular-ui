@@ -1,0 +1,33 @@
+<div class="grid">
+    <div class="col-12">
+      <div class="card">
+        <h5>Mini statement</h5>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Transaction ID</th>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Type</th>
+              <th>Balance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngIf="transactionList.length > 0; else noData">
+              <tr *ngFor="let transaction of transactionList">
+                <td>{{ transaction.transactionId }}</td>
+                <td>{{ transaction.date | date: 'MM/dd/yyyy' }}</td>
+                <td>{{ transaction.amount | currency:'USD':'symbol' }}</td>
+                <td>{{ transaction.type }}</td>
+                <td>{{ transaction.balance | currency:'USD':'symbol' }}</td>
+              </tr>
+            </ng-container>
+          </tbody>
+        </table>
+        <ng-template #noData>
+          <p>No transactions found.</p>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  

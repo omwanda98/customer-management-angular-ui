@@ -1,0 +1,21 @@
+<div class="grid">
+    <div class="col-12">
+      <div class="card">
+        <h5>Cash Withdrawal</h5>
+        <div class="flex-container">
+          <div class="field">
+            <label for="withdrawalAmount">Withdrawal Amount:</label>
+            <input type="number" id="withdrawalAmount" [(ngModel)]="withdrawalAmount" />
+          </div>
+          <div class="field">
+            <label for="debitAccount">Debit Account:</label>
+            <select id="debitAccount" [(ngModel)]="selectedDebitAccount">
+              <option *ngFor="let account of accountOptions" [value]="account">{{ account.name }}</option>
+            </select>
+          </div>
+        </div>
+        <button type="button" (click)="withdraw()">Withdraw</button>
+      </div>
+    </div>
+  </div>
+  

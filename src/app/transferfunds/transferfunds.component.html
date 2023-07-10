@@ -1,0 +1,27 @@
+<div class="grid">
+    <div class="col-12">
+      <div class="card">
+        <h5>Funds Transfer</h5>
+        <div class="flex-container">
+          <div class="field col-12 md:col-6">
+            <label for="debitAccount">Debit Account</label>
+            <select id="debitAccount" [(ngModel)]="selectedDebitAccount">
+              <option *ngFor="let account of accountOptions" [value]="account">{{ account.name }}</option>
+            </select>
+          </div>
+          <div class="field col-12 md:col-6">
+            <label for="creditAccount">Credit Account</label>
+            <select id="creditAccount" [(ngModel)]="selectedCreditAccount">
+              <option *ngFor="let account of accountOptions" [value]="account">{{ account.name }}</option>
+            </select>
+          </div>
+          <div class="field col-12">
+            <label for="transferAmount">Transfer Amount</label>
+            <input type="number" id="transferAmount" [(ngModel)]="transferAmount" />
+          </div>
+        </div>
+        <button type="button" (click)="transferFunds()">Transfer</button>
+      </div>
+    </div>
+  </div>
+  
